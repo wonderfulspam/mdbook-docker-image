@@ -24,7 +24,7 @@ if [[ `git status --porcelain` ]]; then
     die "Unsaved Changes"
 fi
 
-REPOSITORY=michaelfbryan/mdbook-docker-image
+REPOSITORY=wonderfulspam/mdbook-docker-image
 GIT_SHA=$(git rev-parse --short HEAD)
 
 logged docker build -t $REPOSITORY:$GIT_SHA -t $REPOSITORY:latest .

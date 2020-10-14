@@ -1,23 +1,19 @@
 # mdbook-docker-image
 
 [
-  ![Docker Pulls](https://img.shields.io/docker/pulls/michaelfbryan/mdbook-docker-image)
-  ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/michaelfbryan/mdbook-docker-image/latest)
+  ![Docker Pulls](https://img.shields.io/docker/pulls/wonderfulspam/mdbook-docker-image)
+  ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/wonderfulspam/mdbook-docker-image/latest)
 ][image]
 
-A docker image with `mdbook` and common plugins.
+A docker image with `mdbook` and a handful of plugins. Many thanks to the original
+author!
 
 Included binaries:
 
-- [mdbook](https://crates.io/crates/mdbook) - 0.3.7
-- [mdbook-linkcheck](https://crates.io/crates/mdbook-linkcheck) - 0.5.1
-- [mdbook-mermaid](https://crates.io/crates/mdbook-mermaid) - 0.4.1
-- [mdbook-toc](https://crates.io/crates/mdbook-toc) - 0.4.1
-- [mdbook-plantuml](https://crates.io/crates/mdbook-plantuml) - 0.5.0
-- [mdbook-open-on-gh](https://crates.io/crates/mdbook-open-on-gh) - 1.1.1
-
-Docker hub will automatically generate a new image and tag it with `latest`
-whenever new commits are pushed to this GitHub repo.
+- [mdbook](https://crates.io/crates/mdbook) - 0.4.3
+- [mdbook-linkcheck](https://crates.io/crates/mdbook-linkcheck) - 0.7.0
+- [mdbook-toc](https://crates.io/crates/mdbook-toc) - 0.5.1
+- [mdbook-open-git-repo](https://crates.io/crates/mdbook-open-git-repo) - 0.0.2
 
 ## License
 
@@ -37,4 +33,4 @@ submitted for inclusion in the work by you, as defined in the Apache-2.0
 license, shall be dual licensed as above, without any additional terms or
 conditions.
 
-[image]: https://hub.docker.com/r/michaelfbryan/mdbook-docker-image
+[image]: https://hub.docker.com/r/wonderfulspam/mdbook-docker-image
