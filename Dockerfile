@@ -6,7 +6,8 @@ ENV CARGO_INSTALL_ROOT /usr/local/
 RUN apt-get update && apt-get install -y libssl-dev pkg-config
 
 RUN cargo install mdbook --vers 0.4.3 --verbose
-RUN cargo install mdbook-linkcheck --vers 0.7.1 --verbose
+# Temporarily install from latest commit on master until 0.7.2 is released
+RUN cargo install --git https://github.com/Michael-F-Bryan/mdbook-linkcheck --verbose
 RUN cargo install mdbook-toc --vers 0.5.1 --verbose
 RUN cargo install mdbook-open-git-repo --vers 0.0.2 --verbose
 
