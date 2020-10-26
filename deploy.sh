@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 set -e
 
@@ -6,17 +6,17 @@ reset=$(tput sgr0)
 magenta=$(tput setaf 5)
 bold=$(tput bold)
 
-function log {
+log () {
     now=$(date "+%F %T")
     echo "$bold$magenta[$now]" $@ $reset 1>&2
 }
 
-function logged {
+logged () {
     log $@
     $@
 }
 
-function die { log $@; exit 1; }
+die () { log $@; exit 1; }
 
 # make sure there are no unsaved changes
 # https://stackoverflow.com/questions/3878624/how-do-i-programmatically-determine-if-there-are-uncommitted-changes
