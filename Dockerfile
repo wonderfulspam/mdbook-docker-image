@@ -21,7 +21,8 @@ ENV RUST_LOG info
 EXPOSE 3000
 
 # Ensure reqwest (HTTP library powering linkcheck) has certs available
-RUN apt-get update && apt-get install -y ca-certificates
+RUN apt-get update && apt-get install --no-install-recommends -y ca-certificates \
+&& apt-get clean && rm -rf "/var/lib/apt/lists/*" "/tmp/*" "/var/tmp/*" "/usr/share/man/??" "/usr/share/man/??_*"
 
 COPY --from=build /usr/local/bin/mdbook* /bin/
 
