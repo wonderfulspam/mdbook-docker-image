@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y libssl-dev pkg-config
 RUN cargo install --git https://github.com/Michael-F-Bryan/mdbook-linkcheck --verbose
 RUN cargo install mdbook-toc --vers 0.5.1 --verbose
 RUN cargo install mdbook-open-git-repo --vers 0.0.2 --verbose
+RUN cargo install mdbook-mermaid --vers 0.6.1 --verbose
 
 # Patch in custom highlight.js before building mdbook
 COPY ./highlight.min.js /js/
