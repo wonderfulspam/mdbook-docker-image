@@ -26,6 +26,12 @@ RUN apt-get update && apt-get install --no-install-recommends -y ca-certificates
 
 COPY --from=build /usr/local/bin/mdbook* /bin/
 
+# Add highlight.js with extra languages supported
+# Copy in after building book, eg.
+# `cp /js/highlight.min.js ./book/highlight.js`
+# NOTE: Final filename should not contain `.min`
+COPY ./highlight.min.js /js/
+
 WORKDIR /data
 VOLUME [ "/data" ]
 
